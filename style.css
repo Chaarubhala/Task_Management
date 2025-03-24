@@ -1,0 +1,200 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #00296b; /* Dark blue background */
+  color: #ffffff; /* White text for contrast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: #00296b; /* Dark blue background for the container */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background: #00509d; /* Bright blue for sidebar */
+  border-right: 2px solid #00296b; /* Dark blue border */
+}
+
+.sidebar h1 {
+  color: #ffffff; /* White heading */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#task-form input,
+#task-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #00296b; /* Dark blue border */
+  border-radius: 5px;
+  background: #003f88; /* Slightly lighter blue for input background */
+  color: #ffffff; /* White text */
+  transition: border-color 0.3s ease;
+}
+
+#task-form input::placeholder,
+#task-form textarea::placeholder {
+  color: #999; /* Light gray placeholder text */
+  opacity: 1; /* Ensure full visibility */
+}
+
+#task-form input:focus,
+#task-form textarea:focus {
+  border-color: #ffffff; /* White focus border */
+  outline: none;
+}
+
+#task-form button {
+  padding: 12px;
+  background: #ffffff; /* White button */
+  color: #00296b; /* Dark blue text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#task-form button:hover {
+  background: #f0f0f0; /* Light gray on hover */
+  transform: scale(1.05);
+}
+
+.filters {
+  margin-top: 20px;
+}
+
+.filters h2 {
+  color: #ffffff; /* White heading */
+  margin-bottom: 10px;
+}
+
+.filters button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #003f88; /* Slightly lighter blue for filter buttons */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filters button:hover {
+  background: #00509d; /* Bright blue on hover */
+  transform: scale(1.05);
+}
+
+.filters button.active {
+  background: #00509d; /* Bright blue for active filter */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #00509d; /* Bright blue for main content */
+  margin-left: 10px; /* Add a small gap filled with dark blue background */
+}
+
+.main-content h2 {
+  color: #ffffff; /* White heading */
+  margin-bottom: 20px;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #003f88; /* Slightly lighter blue for task background */
+  margin-bottom: 10px;
+  border: 1px solid #00296b; /* Dark blue border */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#task-list li:hover {
+  background: #00509d; /* Bright blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#task-list li.completed {
+  background: #ffffff; /* White for completed tasks */
+  border-color: #f0f0f0; /* Light gray border */
+  color: #00296b; /* Dark blue text for contrast */
+}
+
+#task-list li.completed:hover {
+  background: #f0f0f0; /* Light gray on hover */
+}
+
+#task-list li button {
+  background: #ffffff; /* White button */
+  color: #00296b; /* Dark blue text */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#task-list li button:hover {
+  background: #f0f0f0; /* Light gray on hover */
+  transform: scale(1.05);
+}
+
+#task-list li button:first-of-type {
+  background: #003f88; /* Slightly lighter blue for toggle button */
+  color: #ffffff; /* White text for contrast */
+}
+
+#task-list li button:first-of-type:hover {
+  background: #00509d; /* Bright blue on hover */
+}
+
+/* Animation for task addition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#task-list li {
+  animation: fadeIn 0.5s ease;
+}
