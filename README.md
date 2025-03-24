@@ -2,8 +2,6 @@
 
 A simple and intuitive Task Management Application built using **HTML**, **CSS**, and **JavaScript**. This application allows users to add, edit, delete, and view tasks. It also includes features like filtering tasks by status (completed/pending).
 
----
-
 ## Features
 
 1. **Add Task**:
@@ -29,7 +27,6 @@ A simple and intuitive Task Management Application built using **HTML**, **CSS**
 7. **Persistent Storage**:
    - Tasks are saved in the browser's local storage, so they persist even after refreshing the page.
 
----
 
 ## How It Was Done
 
